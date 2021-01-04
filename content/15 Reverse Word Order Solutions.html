@@ -133,9 +133,39 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='HW1.html'>Next</a> >> HW1<br /><h1>目錄</h1>
-<h6><a href="https://40823152.github.io/cp2020bg3/content/index.html">https://40823152.github.io/cp2020bg3/content/index.html</a></h6>
-<br /> <a href='HW1.html'>Next</a> >> HW1</div>
+    <div id="tipue_search_content">2 Odd Or Even << <a href='2 Odd Or Even.html'>Previous</a> <a href='16 Password Generator Solutions.html'>Next</a> >> 16 Password Generator Solutions<br /><h1>15 Reverse Word Order Solutions</h1>
+<h6>Write a program (using functions!) that asks the user for a long string containing multiple words. Print back to the user the same string, except with the words in backwards order. For example, say I type the string:<span><br/> </span>編寫一個程序（使用函數！），要求用戶提供包含多個單詞的長字符串。向用戶打印相同的字符串，但單詞順序相反。例如，說我鍵入字符串：</h6>
+<h6><span>My</span> <span>name</span> <span><strong>is</strong></span> <span>Michele</span></h6>
+<h6>Then I would see the string:<span> <br/> </span>我叫米歇爾 然後我會看到字符串：</h6>
+<h6>  <span>Michele</span> <span><strong>is</strong></span> <span>name</span> <span>My</span></h6>
+<h6>shown back to me.</h6>
+<h6>米歇爾是我的名字 顯示給我。</h6>
+<h5><strong>Discussion 討論區</strong></h5>
+<h6><span lang="EN-US" style="font-size: 13.5pt; font-family: 'Book Antiqua',serif; color: black;">Concepts for this week(本週的概念):<o:p></o:p></span></h6>
+<h5>1. More string things 更弦的東西</h5>
+<h6>Python has a lot of interesting things you can do with strings. I will show a few here, but you can see many more methods that may or may not be useful at the official Python documentation about the string format.</h6>
+<h6>Remember that strings are lists.</h6>
+<h6>Python有很多有趣的事情，您可以使用字符串來完成。我將在此處顯示一些方法，但是您可以在關於字符串格式的官方Python文檔中看到更多可能有用或可能沒有用的方法。 請記住，字符串是列表。</h6>
+<h6 style="line-height: 21.0pt; margin: 6.0pt 0cm 6.0pt 0cm;"><span lang="EN-US" style="font-size: 13.5pt; font-family: 'Book Antiqua',serif; color: black;">You can “split” or tear apart strings based on a given set of characters. For example:<o:p></o:p></span></h6>
+<h6>您可以根據給定的字符集“拆分”或拆分字符串。例如：</h6>
+<h6>  <span>teststring</span> <span><strong>=</strong></span> <span>"this is a test"</span>  <span>result</span> <span><strong>=</strong></span> <span>teststring</span><span><strong>.</strong></span><span>split</span><span>(</span><span>"t"</span><span>)</span></h6>
+<h6 class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr"><span lang="zh-TW">測試字符串 = "</span><span lang="zh-TW">這是測試" 結果 = <span>teststring</span><span><strong>.</strong></span><span>split</span><span>(</span><span>"t"</span><span>)</span></span></h6>
+<h6>And at the end, result will contain the list(<span lang="zh-TW">最後，結果將包含列表)</span>:</h6>
+<h6>  <span>[</span><span>''</span><span>,</span> <span>'his is a '</span><span>,</span> <span>'es'</span><span>,</span> <span>''</span><span>]</span></h6>
+<h6>Instead of "t", you can write any character you want. If you do not include any character, it means “split on all whitespace”:</h6>
+<h6 class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"><span lang="zh-TW">您可以寫任何所需的字符，而不是“ t”。如果您不包含任何字符，則表示“在所有空格上分割”：</span></h6>
+<h6>  <span>teststring</span> <span><strong>=</strong></span> <span>"  this      has a lot    of   spaces and    tabs"</span>  <span>result</span> <span><strong>=</strong></span> <span>testring</span><span><strong>.</strong></span><span>split</span><span>()</span></h6>
+<h6 class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr"><span lang="zh-TW">測試字符串 = <span>“這有很多空格和製表符” 結果 = testring<span><strong>.</strong></span><span>split</span><span>()</span></span></span></h6>
+<h6>Then result contains (<span lang="zh-TW">然後結果包含)</span>:</h6>
+<h6>  <span>[</span><span>'this'</span><span>,</span> <span>'has'</span><span>,</span> <span>'a'</span><span>,</span> <span>'lot'</span><span>,</span> <span>'of'</span><span>,</span> <span>'spaces'</span><span>,</span> <span>'and'</span><span>,</span> <span>'tabs'</span><span>]</span></h6>
+<h5>2. Joinging Strings (<span>連接字符串)</span></h5>
+<h6>You can also relatively easily “join” or “smush” strings together:</h6>
+<h6><span>您還可以相對容易地將字符串“連接”或“混入”：</span></h6>
+<h6><span>  <span>listofstrings</span> <span><strong>=</strong></span> <span>[</span><span>'a'</span><span>,</span> <span>'b'</span><span>,</span> <span>'c'</span><span>]</span>  <span>result</span> <span><strong>=</strong></span> <span>"**"</span><span><strong>.</strong></span><span>join</span><span>(</span><span>listofstrings</span><span>)</span></span></h6>
+<h6><span><span>字符串列表 = [<span>'a'</span><span>,</span><span><span> </span></span><span>'b'</span><span>,</span><span><span> </span></span><span>'c'</span><span>] 結果 = "**"<span><strong>.</strong></span><span>join</span><span>(</span><span>listofstrings</span><span>)</span></span></span></span></h6>
+<h6>Then result will contain the string(<span>然後結果將包含字符串)</span>:</h6>
+<h6><span>  a**b**c</span></h6>
+<br />2 Odd Or Even << <a href='2 Odd Or Even.html'>Previous</a> <a href='16 Password Generator Solutions.html'>Next</a> >> 16 Password Generator Solutions</div>
         
     <!-- footer -->
       <div class="container">
