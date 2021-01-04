@@ -153,7 +153,7 @@ img.add_border {
 </ol>
 <h6>1.如果數字是4的倍數，請打印出另一條消息。</h6>
 <h6>2.向用戶詢問兩個數字：一個數字要檢查（稱為num），另一個數字要除以（檢查）。如果檢查平均分為num，請告知用戶。如果不是，請打印其他適當的消息。</h6>
-<h5><strong>Discussion討論區</strong></h5>
+<h6><strong>Discussion討論區</strong></h6>
 <h6>Concepts for this week本週的概念 :</h6>
 <ul>
 <li>
@@ -166,7 +166,7 @@ img.add_border {
 <h6>Checking equality檢查平等</h6>
 </li>
 </ul>
-<h5><strong>Modular arithmetic (the modulus operator)模塊化算術（模運算符）</strong></h5>
+<h6><strong>Modular arithmetic (the modulus operator)模塊化算術（模運算符）</strong></h6>
 <h6>We have been doing arithmetic (addition, subtraction, multiplication, division) since elementary school, and often it is useful for us to find not the answer to a division problem but the remainder when we do a division operation. This operation is called the “modulus operation.” For example, when I divide 5 by 3, the remainder is 2, and the sentence reads like this: “5 modulo 3 is 2.”</h6>
 <h6><span><br/> </span>從小學開始，我們就一直在進行算術運算（加，減，乘，除），這對於我們尋找除法問題不是答案，而是對除法運算的其餘部分有用。該操作稱為“模運算”。例如，當我將5除以3時，餘數為2，句子的內容如下：“ 5模3為2”。</h6>
 <h6><strong>In the Python shell(在Python Shell中):</strong></h6>
@@ -177,7 +177,7 @@ img.add_border {
 <h6><strong>&gt;&gt;&gt;</strong> 7 <strong>%</strong> 3</h6>
 <h6>1</h6>
 <h6>The % sign is exactly the modulus operator.(<span>％符號正好是模數運算符。)</span></h6>
-<h5><strong>Conditionals 有條件的</strong></h5>
+<h6><strong>Conditionals 有條件的</strong></h6>
 <h6>When a computer (or a program) needs to decide something, it checks whether some condition is satisfied, which is where the term <strong>conditional</strong> comes from. Conditionals are a fancy way of saying “if statements”. If Michele was born in New York, she has an American passport. That statement is a conditional (if statement) that in this case is true. In Python this works the same way:</h6>
 <h6><span><br/> </span>當計算機（或程序）需要做出決定時，它會檢查是否滿足某些條件，這就是條件一詞的來源。條件語句是說“ if語句”的一種奇特的方式。如果米歇爾（Michele）出生於紐約，則她擁有美國護照。該語句是在這種情況下為真的條件（如果語句）。在Python中，這是相同的方式：</h6>
 <h6><span><strong>if</strong></span> <span>age</span> <span><strong>&gt;</strong></span> <span>17</span><span>:</span>  </h6>
@@ -199,7 +199,20 @@ img.add_border {
 <h6>Python for beginners explains conditionals(初學者使用Python解釋條件)</h6>
 </li>
 </ul>
-<h6></h6>
+<h6><strong>Checking for equality (and comparators in general)</strong></h6>
+<h6><strong>檢查是否相等（以及一般的比較器）</strong></h6>
+<h6>A fundamental thing you want to do with your program is check whether some number is equal to another. Say the user tells you how many questions they answered incorrectly on a practice exam, and depending on the number of correctly-answered questions, you can suggest a specific course of action. For integers, strings, floats, and many other variable types, this is done with a simple syntax: ==. To explicitly check inequality, use !=.您要對程序執行的基本操作是檢查某個數字是否等於另一個數字。假設用戶告訴您在練習考試中有多少個錯誤回答的問題，並且根據正確回答的問題數，您可以提出具體的操作建議。對於整數，字符串，浮點數和許多其他變量類型，這是通過簡單的語法完成的：==。要顯式檢查不平等，請使用！=。</h6>
+<h6><span><strong>if</strong></span> <span>a</span> <span><strong>==</strong></span> <span>3</span><span>:</span>   </h6>
+<h6><span><strong>print</strong></span><span>(</span><span>"the variable has the value 3"</span><span>)</span></h6>
+<h6><span><strong>elif</strong></span> <span>a</span> <span><strong>!=</strong></span> <span>3</span><span>:</span> </h6>
+<h6><span><strong>print</strong></span><span>(</span><span>"the variable does not have the value 3"</span><span>)</span></h6>
+<h6>Notice how in this example, the condition is redundant. In the first condition we are checking whether the variable a has the value 3 and in the second, we are checking whether a does NOT have the value 3. However, if the first condition is not true (a is in fact not 3), then the second condition is by definition true. So a more efficient way to write the above conditional is like this:請注意，在此示例中，條件是多餘的。在第一個條件中，我們正在檢查變量a是否具有值3，在第二個條件中，我們正在檢查a是否不具有值3。但是，如果第一個條件不為真（a實際上不是3），那麼根據定義，第二個條件為真。因此，編寫上述條件的更有效方法如下：</h6>
+<h6><span><strong>if</strong></span> <span>a</span> <span><strong>==</strong></span> <span>3</span><span>:</span>   </h6>
+<h6><span><strong>print</strong></span><span>(</span><span>"the variable has the value 3"</span><span>)變量的質為3</span></h6>
+<h6><span><strong>else</strong></span><span>:</span> </h6>
+<h6><span><strong>print</strong></span><span>(</span><span>"the variable does not have the value 3"</span><span>)變量沒有質為3</span></h6>
+<h6>The same equality / inequality comparisons work for strings.</h6>
+<h6>相同的相等/不相等比較適用於字符串。</h6>
 <br />HW3 << <a href='HW3.html'>Previous</a> <a href='15 Reverse Word Order Solutions.html'>Next</a> >> 15 Reverse Word Order Solutions</div>
         
     <!-- footer -->
