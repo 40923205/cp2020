@@ -360,7 +360,14 @@ print reverse_v4(test1)</pre>
 <h5>Discussion 討論區</h5>
 <h6>There are no new topics this week, but you will need to use Python's random module , described in this post.</h6>
 <h6>本週沒有新話題，但是您需要使用Python的隨機模塊，如本文所述。</h6>
-<h2>19 Decode A Web Page Two Solutions</h2>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import string
+import random
+
+def pw_gen(size = 8, chars=string.ascii_letters + string.digits + string.punctuation):
+	return ''.join(random.choice(chars) for _ in range(size))
+
+print(pw_gen(int(input('How many characters in your password?'))))</pre>
+<p></p><h2>19 Decode A Web Page Two Solutions</h2>
 <h6>Using the requests and BeautifulSoup Python libraries, print to the screen the full text of the article on this website: </h6>
 <h6 class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"><span lang="zh-TW">使用請求和BeautifulSoup Python庫，將該網站上文章的全文打印到屏幕上：</span></h6>
 <p><a href="http://www.vanityfair.com/society/2014/06/monica-lewinsky-humiliation-culture.">http://www.vanityfair.com/society/2014/06/monica-lewinsky-humiliation-culture.</a></p>
