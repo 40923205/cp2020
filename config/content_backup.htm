@@ -1,5 +1,9 @@
 <h1>目錄</h1>
+<h4><strong>分組網站</strong></h4>
 <h6><a href="https://40823152.github.io/cp2020bg3/content/index.html">https://40823152.github.io/cp2020bg3/content/index.html</a></h6>
+<h4><strong>心得</strong></h4>
+<h6>這學期第一次接觸到寫程式的課程，覺得非常有趣，是以前完全沒接觸過的類型，而在之中也學到新單字，一開始甚麼都不會的我，到現在也學到了不少新東西了呢!</h6>
+<h6><strong>自評分數 : </strong>65</h6>
 <h1>HW1</h1>
 <h2>PCH 2 Procedures and Safety</h2>
 <p><span>This lesson covers the basic procedures and safety precautions with which technicians must be competent and comfortable before working on various PC hardware. First we will discuss the hazards of computer systems and tools, including electricity, electrostatic discharge (ESD), chemicals, and other dangers that can hurt you when you are working on the various forms of computer hardware. We will also cover the safety measures and procedures that you must employ to minimize risk, such as using ESD straps, ESD mats, self-grounding systems, and equipment grounding. We will then discuss personal safety, including removal of jewelry to protect yourself and computers, proper lifting techniques and weight limitations, and removal of electrical power. Finally, we will cover electrical fire safety, cathode ray tube (CRT) safety and disposal, cable management, and local government regulation compliance.</span></p>
@@ -285,7 +289,8 @@ if num % check == 0:
     print(num, "divides evenly by", check)
 else:
     print(num, "does not divide evenly by", check)</pre>
-<p></p><h2>15 Reverse Word Order Solutions</h2>
+<p></p>
+<h2>15 Reverse Word Order Solutions</h2>
 <h6>Write a program (using functions!) that asks the user for a long string containing multiple words. Print back to the user the same string, except with the words in backwards order. For example, say I type the string:<span><br/> </span>編寫一個程序（使用函數！），要求用戶提供包含多個單詞的長字符串。向用戶打印相同的字符串，但單詞順序相反。例如，說我鍵入字符串：</h6>
 <h6><span>My</span> <span>name</span> <span><strong>is</strong></span> <span>Michele</span></h6>
 <h6>Then I would see the string:<span> <br/> </span>我叫米歇爾 然後我會看到字符串：</h6>
@@ -351,7 +356,8 @@ print reverse_v1(test1)
 print reverse_v2(test1)
 print reverse_v3(test1)
 print reverse_v4(test1)</pre>
-<p></p><h2>16 Password Generator Solutions</h2>
+<p></p>
+<h2>16 Password Generator Solutions</h2>
 <h6>Write a password generator in Python. Be creative with how you generate passwords - strong passwords have a mix of lowercase letters, uppercase letters, numbers, and symbols. The passwords should be random, generating a new password every time the user asks for a new password. Include your run-time code in a main method.</h6>
 <h6>用Python編寫密碼生成器。在生成密碼的方式上要有創意-強密碼包含小寫字母，大寫字母，數字和符號。密碼應該是隨機的，每次用戶要求輸入新密碼時都會生成一個新密碼。在主要方法中包括您的運行時代碼。</h6>
 <h6>Extra(額外):</h6>
@@ -367,7 +373,8 @@ def pw_gen(size = 8, chars=string.ascii_letters + string.digits + string.punctua
 	return ''.join(random.choice(chars) for _ in range(size))
 
 print(pw_gen(int(input('How many characters in your password?'))))</pre>
-<p></p><h2>19 Decode A Web Page Two Solutions</h2>
+<p></p>
+<h2>19 Decode A Web Page Two Solutions</h2>
 <h6>Using the requests and BeautifulSoup Python libraries, print to the screen the full text of the article on this website: </h6>
 <h6 class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"><span lang="zh-TW">使用請求和BeautifulSoup Python庫，將該網站上文章的全文打印到屏幕上：</span></h6>
 <p><a href="http://www.vanityfair.com/society/2014/06/monica-lewinsky-humiliation-culture.">http://www.vanityfair.com/society/2014/06/monica-lewinsky-humiliation-culture.</a></p>
@@ -392,4 +399,30 @@ print(pw_gen(int(input('How many characters in your password?'))))</pre>
 <h6>Use the magnifying glass on the bottom-left of the page to click on elements of the page and look at their properties. (使用頁面左下方的放大鏡單擊頁面元素並查看其屬性。)</h6>
 </li>
 </ol>
-<p><span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">"""
+Using the requests and BeautifulSoup Python libraries, print to the screen the full text of the
+article on this website: http://www.vanityfair.com/society/2014/06/monica-lewinsky-humiliation-culture.
+http://www.practicepython.org/exercise/2014/07/14/19-decode-a-web-page-two.html
+"""
+
+import requests
+from bs4 import BeautifulSoup
+
+def print_to_text(base_url):
+    """
+    :param base_url: URL of article to scrape
+    :return: naked content to text file
+    """
+    r = requests.get(base_url)
+    soup = BeautifulSoup(r.text)
+    with open("work less.txt", "w") as textfile:
+        for paragraph in soup.find_all(dir="ltr"):
+            textfile.write(paragraph.text.replace("&lt;span&gt;",""))
+
+if __name__ == "__main__":
+    #Chose my own article
+    base_url = "http://www.theatlantic.com/business/archive/2014/08/to-work-better-work-less/375763/"
+    base_url2 = "http://www.theatlantic.com/business/archive/2014/08/to-work-better-work-less/375763/2/"
+    print_to_text(base_url)
+    print_to_text(base_url2)</pre>
+<p><span><br/><br/></span></p>
